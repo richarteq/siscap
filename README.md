@@ -23,7 +23,7 @@ docker search richarteq/siscap
 
 ### Buscar imagen en DockerHub
 ```
-docker run -d -p 8090:80 --name siscap1 richarteq/siscap
+docker run -d -p 8090:80 --name siscap richarteq/siscap
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
@@ -39,7 +39,7 @@ docker build -t richarteq-siscap .
 
 ### Crear contenedor con acceso sólo al servidor web
 ``` 
-docker run -d -p 8192:80 --name siscap richarteq-siscap
+docker run -d -p 8192:80 --name siscap2 richarteq-siscap
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
@@ -47,27 +47,27 @@ docker run -d -p 8192:80 --name siscap richarteq-siscap
 
 ### Crear contenedor con acceso a los servidores web y de base de datos
 ```
-docker run -d -p 8090:80 -p 3306:33060 --name siscap richarteq-siscap
+docker run -d -p 8090:80 -p 3306:33060 --name siscap2 richarteq-siscap
 ```
 
 ### Acceder al contenedor desde terminal
 ```
-docker exec -it siscap /bin/bash
+docker exec -it siscap2 /bin/bash
 ```
 
 ### Iniciar contenedor
 ```
-docker start siscap
+docker start siscap2
 ```
 
 ### Detener contenedor
 ```
-docker stop siscap
+docker stop siscap2
 ```
 
 ### Eliminar contenedor
 ```
-docker rm siscap
+docker rm siscap2
 ```
 
 ### Eliminar imagen
