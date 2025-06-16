@@ -80,7 +80,7 @@ RUN chmod 775 -R /webapps/siscap/webapp/logs/
 RUN chmod 775 -R /webapps/siscap/webapp/tmp/
 
 RUN chown www-data:siscap -R /webapps/siscap/webapp/tmp/
-chown www-data:siscap -R /webapps/siscap/webapp/logs/
+RUN chown www-data:siscap -R /webapps/siscap/webapp/logs/
 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
