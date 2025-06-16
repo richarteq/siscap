@@ -18,44 +18,46 @@ SISCAP es una Aplicación Web(WebApp), para dar soporte a un sistema de Capacita
 
 ### Crear imagen
 ```
-docker build -t siscap-image .
-```
-
-### Crear contenedor con acceso a los servidores web y de base de datos
-```
-docker run -d -p 8090:80 -p 3306:33060 --name siscap-webapp siscap-image
+docker build -t richarteq/siscap .
 ```
 
 ### Crear contenedor con acceso sólo al servidor web
 ``` 
-docker run -p 8090:80 --name siscap-webapp -it siscap-image
+docker run -d -p 8192:80 --name siscap richarteq/siscap
 ```
 
-### Iniciar contenedor
+## Acceder a la aplicación web SisCap desde el navegador Web
+- http://127.0.0.1:8192/siscap
+
+### Crear contenedor con acceso a los servidores web y de base de datos
 ```
-docker start siscap-webapp
+docker run -d -p 8090:80 -p 3306:33060 --name siscap richarteq/siscap
 ```
 
 ### Acceder al contenedor desde terminal
 ```
-docker exec -it siscap-webapp /bin/bash
+docker exec -it siscap /bin/bash
+```
+
+### Iniciar contenedor
+```
+docker start siscap
 ```
 
 ### Detener contenedor
 ```
-docker stop siscap-webapp
+docker stop siscap
 ```
 
 ### Eliminar contenedor
 ```
-docker rm siscap-webapp
+docker rm siscap
 ```
 
 ### Eliminar imagen
 ```
-docker rmi siscap-image
+docker rmi richarteq/siscap
 ```
-
 
 #### Otros comandos desde terminal
 ``` 
@@ -93,15 +95,12 @@ alias /siscap /webapps/siscap/webapp/webroot
        Require all granted
 </Directory>
 <VirtualHost *:80>
-
         ServerAdmin siscap@webapps.com
         ServerName siscap.webapps.com
         ServerAlias www.siscap.webapps.com
         DocumentRoot /webapps/siscap/webapp/webroot
-
         ErrorLog ${APACHE_LOG_DIR}/siscap.error.log
         CustomLog ${APACHE_LOG_DIR}/siscap.access.log combined
-
 </VirtualHost>
 ```
 
