@@ -14,16 +14,32 @@ SISCAP es una Aplicación Web(WebApp), para dar soporte a un sistema de Capacita
 - CakePHP (Ver requerimientos en Documentación oficial del framework o en el manual de instalación).
 - Opcional: Docker (Se incluye un archivo Dockerfile para reconstruir servidor Backend.
 
-## Docker
+## Docker Hub
+
+### Buscar imagen en DockerHub
+```
+docker search richarteq/siscap
+```
+
+### Buscar imagen en DockerHub
+```
+docker run -d -p 8090:80 --name siscap1 richarteq/siscap
+```
+
+## Acceder a la aplicación web SisCap desde el navegador Web
+- http://127.0.0.1:8090/siscap
+
+
+## Docker Localmente
 
 ### Crear imagen
 ```
-docker build -t richarteq/siscap .
+docker build -t richarteq-siscap .
 ```
 
 ### Crear contenedor con acceso sólo al servidor web
 ``` 
-docker run -d -p 8192:80 --name siscap richarteq/siscap
+docker run -d -p 8192:80 --name siscap richarteq-siscap
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
@@ -31,7 +47,7 @@ docker run -d -p 8192:80 --name siscap richarteq/siscap
 
 ### Crear contenedor con acceso a los servidores web y de base de datos
 ```
-docker run -d -p 8090:80 -p 3306:33060 --name siscap richarteq/siscap
+docker run -d -p 8090:80 -p 3306:33060 --name siscap richarteq-siscap
 ```
 
 ### Acceder al contenedor desde terminal
@@ -56,7 +72,7 @@ docker rm siscap
 
 ### Eliminar imagen
 ```
-docker rmi richarteq/siscap
+docker rmi richarteq-siscap
 ```
 
 #### Otros comandos desde terminal
