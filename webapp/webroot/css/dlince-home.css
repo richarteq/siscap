@@ -1,0 +1,114 @@
+a {
+  line-height: inherit;
+  text-decoration: none;
+}
+
+
+
+input[type=submit], button[type=submit], button[type=button]{
+	border:none;
+	border-radius: 6px;
+  margin-right: 10px;
+}
+
+.paginator {
+    text-align: center;
+}
+.paginator ul.pagination li {
+    float: none;
+    display: inline-block;
+}
+
+/*
+p{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+}
+*/
+
+/* Buttons */
+
+    .icon
+    {
+      position: relative;
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.50em 1.5em;
+      background: none;
+      border-radius: 6px;
+      text-decoration: none;
+
+      font-size: 1em;
+      color: #B9264F;
+      -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+      -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+      -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+      -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+      transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+      cursor: pointer;
+    }
+
+      .icon:hover
+      {
+        background: none;
+      }
+
+      .icon:focus
+      {
+        background: none;
+        border-color:none;
+      }
+
+/**/
+/* Vista rapida de evaluacion */
+/**/
+form#form-evaluation fieldset{
+  background-color: #F2F9F8;
+  clear:left;
+}
+form#form-evaluation h2.title-evaluation{
+  font-weight: bold;
+  text-align: center;
+  clear:left;
+  background-color: #E37795;
+  color: #F2F9F8;
+}
+form#form-evaluation ul.description-evaluation{
+	padding-left: 8px;
+  background-color: #FAE7EC;
+}
+form#form-evaluation ul.description-evaluation li span.label{
+  float:left;
+  width:100px;
+  color:#0174DF;
+}
+form#form-evaluation ul.questions-evaluation li span.text{
+  float:left;
+}
+form#form-evaluation ul.questions-evaluation li.question{  
+  background-color: #FAE7EC;
+  color: #B9264F;
+  font-weight: bold;
+  font-size: 18px;
+  padding-top: 8px;
+  padding-left: 8px;
+  border: none;
+}
+form#form-evaluation ul.questions-evaluation li.description{  
+      padding: 0.2em 0.5em;
+    border: none;
+    border-radius: 6px;
+    color: #640225;
+    font-size: 14px;
+    text-align: left;
+}
+form#form-evaluation ul.questions-evaluation li em{
+  color:black;
+}
+form#form-evaluation ul.questions-evaluation li ol.options-question{
+  color:black;
+}
