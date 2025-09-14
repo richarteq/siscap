@@ -21,9 +21,14 @@ SISCAP es una Aplicación Web(WebApp), para dar soporte a un sistema de Capacita
 docker search richarteq/siscap
 ```
 
-### Buscar imagen en DockerHub
+### Crear un contenedor que ejecute SisCap
 ```
 docker run -d -p 8090:80 --name siscap richarteq/siscap
+```
+
+### Crear un contenedor que ejecute SisCap
+```
+docker run -d -p 8191:80 -p 8192:3306 -p 8193:22  --name siscap richarteq/siscap
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
