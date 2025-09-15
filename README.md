@@ -23,16 +23,16 @@ docker search richarteq/siscap
 
 ### Crear un contenedor que ejecute SisCap
 ```
-docker run -d -p 8090:80 --name siscap richarteq/siscap
+docker run -d -p 8190:80 --name siscap richarteq/siscap2
 ```
 
 ### Crear un contenedor que ejecute SisCap
 ```
-docker run -d -p 8191:80 -p 8192:3306 -p 8193:22  --name siscap richarteq/siscap
+docker run -d -p 8191:80 -p 8192:3306 -p 8193:22  --name siscap richarteq/siscap2
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
-- http://127.0.0.1:8090/siscap
+- http://127.0.0.1:8190/siscap
 
 
 ## Docker Localmente
@@ -44,15 +44,15 @@ docker build -t richarteq-siscap .
 
 ### Crear contenedor con acceso sólo al servidor web
 ``` 
-docker run -d -p 8192:80 --name siscap2 richarteq-siscap
+docker run -d -p 8290:80 --name siscap2 richarteq-siscap
 ```
 
 ## Acceder a la aplicación web SisCap desde el navegador Web
-- http://127.0.0.1:8192/siscap
+- http://127.0.0.1:8290/siscap
 
 ### Crear contenedor con acceso a los servidores web y de base de datos
 ```
-docker run -d -p 8090:80 -p 3306:33060 --name siscap2 richarteq-siscap
+docker run -d -p 8291:80 -p 8292:3306 -p 8283:22 --name siscap2 richarteq-siscap
 ```
 
 ### Acceder al contenedor desde terminal
